@@ -1,11 +1,12 @@
-import 'package:alquran/app/modules/get_started/widgets/get_started_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 
+import '../controllers/get_started_controller.dart';
 import '../widgets/alquran_widget.dart';
 import '../widgets/subtitle_widget.dart';
 import '../widgets/title_widget.dart';
 
-class GetStartedView extends StatelessWidget {
+class GetStartedView extends GetView<GetStartedController> {
   const GetStartedView({super.key});
 
   @override
@@ -33,7 +34,7 @@ class GetStartedView extends StatelessWidget {
           Center(
             child: AlquranWidget(
               alquranImage: 'assets/images/alquran_background.png',
-              onpressed: () {},
+              onpressed:controller.toHomePage,
               titleButton: 'Get Starteed',
             ),
           )

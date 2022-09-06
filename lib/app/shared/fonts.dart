@@ -10,9 +10,16 @@ class Font {
     fontSize: 20,
     fontWeight: FontWeight.w700,
   );
-  
-   static TextStyle subTitleTextStyle = GoogleFonts.poppins(
+
+  static TextStyle subTitleTextStyle = GoogleFonts.poppins(
     fontSize: 18,
-   
+  );
+  static TextStyle leadingTextStyle = GoogleFonts.amiri(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle trailingArabicTextStyle = GoogleFonts.amiri(
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
   );
 }
