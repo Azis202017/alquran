@@ -1,79 +1,44 @@
-import 'package:alquran/app/shared/color.dart';
+import 'package:alquran/app/modules/get_started/widgets/get_started_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
+import '../widgets/alquran_widget.dart';
+import '../widgets/subtitle_widget.dart';
+import '../widgets/title_widget.dart';
 
-import '../../../shared/fonts.dart';
-import '../controllers/get_started_controller.dart';
+class GetStartedView extends StatelessWidget {
+  const GetStartedView({super.key});
 
-class GetStartedView extends GetView<GetStartedController> {
-  const GetStartedView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        margin: const EdgeInsets.only(
-          top: 86,
-        ),
-        child: Column(
-          children: [
-            Text(
-              'Quran App',
-              style: Font.titleTextStyle.copyWith(
-                color: primaryColor,
-              ),
+    return SafeArea(
+      child: Scaffold(
+          body: Column(
+        children: [
+          const SizedBox(
+            height: 52,
+          ),
+          const Center(
+            child: TitleWidget(
+              title: 'Quran Apps',
             ),
-            const SizedBox(
-              height: 16,
+          ),
+          const Center(
+            child: SubtitleWidget(
+              subtitle: 'Learn Quran and Recite once everyday',
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(
-                horizontal: 90,
-              ),
-              width: double.infinity,
-              child: Text(
-                'Learn Quran and Recite once everyday',
-                style: Font.subTitleTextStyle.copyWith(
-                  color: greyColor,
-                ),
-                textAlign: TextAlign.center,
-              ),
+          ),
+          const SizedBox(
+            height: 41,
+          ),
+          Center(
+            child: AlquranWidget(
+              alquranImage: 'assets/images/alquran_background.png',
+              onpressed: () {},
+              titleButton: 'Get Starteed',
             ),
-            const SizedBox(height: 41),
-            SizedBox(
-              height: 450,
-              child: Stack(
-                children: [
-                  Center(
-                    child: Image.asset(
-                      'assets/images/alquran_background.png',
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SizedBox(
-                      width: 185,
-                      height: 60,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: buttonColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              30,
-                            ),
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: const Text('Get Started'),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
+          )
+        ],
+      )),
     );
   }
 }
