@@ -1,3 +1,4 @@
+import 'package:alquran/app/shared/themes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -10,6 +11,7 @@ void main() {
       title: "Application",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      theme: themeData,
     ),
   );
 }
