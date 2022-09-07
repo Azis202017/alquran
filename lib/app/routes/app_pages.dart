@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/bottom_navbar/bindings/bottom_navbar_binding.dart';
+import '../modules/bottom_navbar/views/bottom_navbar_view.dart';
 import '../modules/detail_alquran/bindings/detail_alquran_binding.dart';
 import '../modules/detail_alquran/views/detail_alquran_view.dart';
 import '../modules/get_started/bindings/get_started_binding.dart';
@@ -31,6 +33,11 @@ class AppPages {
       name: _Paths.DETAIL_ALQURAN,
       page: () => const DetailAlquranView(),
       binding: DetailAlquranBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOM_NAVBAR,
+      page: () => const BottomNavbarView(),
+      binding: BottomNavbarBinding(),
     ),
   ];
 }

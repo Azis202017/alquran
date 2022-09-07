@@ -44,6 +44,7 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
               ),
             ),
           ),
+        
           body: controller.isLoading
               ? Center(
                   child: Lottie.asset('assets/json/loading.json'),
@@ -220,11 +221,9 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                                   ),
                                 ),
                                 const SizedBox(height: 16),
-
                                 Text(
                                   '${data?.translation?.id}',
                                   style: Font.ayatTextStyle,
-                                 
                                 ),
                                 const SizedBox(
                                   height: 41,

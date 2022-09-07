@@ -22,3 +22,4 @@ LinearGradient linear = const LinearGradient(
     Color(0xff9055FF),
   ],
 );
+Color purpleColor = const Color(0xff240F4F);

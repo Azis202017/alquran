@@ -13,33 +13,34 @@ class GetStartedView extends GetView<GetStartedController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          body: Column(
-        children: [
-          const SizedBox(
-            height: 52,
-          ),
-          const Center(
-            child: TitleWidget(
-              title: 'Quran Apps',
+        body: Column(
+          children: [
+            const SizedBox(
+              height: 52,
             ),
-          ),
-          const Center(
-            child: SubtitleWidget(
-              subtitle: 'Learn Quran and Recite once everyday',
+            const Center(
+              child: TitleWidget(
+                title: 'Quran Apps',
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 41,
-          ),
-          Center(
-            child: AlquranWidget(
-              alquranImage: 'assets/images/alquran_background.png',
-              onpressed:controller.toHomePage,
-              titleButton: 'Get Starteed',
+            const Center(
+              child: SubtitleWidget(
+                subtitle: 'Learn Quran and Recite once everyday',
+              ),
             ),
-          )
-        ],
-      )),
+            const SizedBox(
+              height: 41,
+            ),
+            Center(
+              child: AlquranWidget(
+                alquranImage: 'assets/images/alquran_background.png',
+                onpressed: controller.toHomePage,
+                titleButton: 'Get Starteed',
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

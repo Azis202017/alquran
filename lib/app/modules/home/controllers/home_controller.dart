@@ -9,7 +9,7 @@ class HomeController extends GetxController {
   bool isLoading = true;
   @override
   void onInit() async {
-    SurahApi().getSurah();
+    getSurah();
     super.onInit();
   }
 

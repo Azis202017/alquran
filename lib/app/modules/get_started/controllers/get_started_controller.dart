@@ -3,6 +3,6 @@ import 'package:get/get.dart';
 
 class GetStartedController extends GetxController {
  void toHomePage() {
-  Get.toNamed(Routes.HOME);
+  Get.toNamed(Routes.BOTTOM_NAVBAR);
  }
 }

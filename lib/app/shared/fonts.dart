@@ -16,12 +16,12 @@ class Font {
   static TextStyle subTitleTextStyle = GoogleFonts.poppins(
     fontSize: 18,
   );
-  static TextStyle leadingTextStyle = GoogleFonts.amiri(
+  static TextStyle leadingTextStyle = GoogleFonts.poppins(
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );
   static TextStyle trailingArabicTextStyle = GoogleFonts.amiri(
-    fontSize: 20,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
   );
   static TextStyle titleOfSurahTextStyle = GoogleFonts.poppins(
@@ -41,5 +41,13 @@ class Font {
   static TextStyle ayatTextStyle = GoogleFonts.amiri(
     fontSize: 18,
     fontWeight: FontWeight.w700,
+  );
+  static TextStyle mediumTextStyle = GoogleFonts.poppins(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle semiBoldTextStyle = GoogleFonts.poppins(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
   );
 }
