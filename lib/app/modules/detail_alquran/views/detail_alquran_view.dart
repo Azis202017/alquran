@@ -68,14 +68,9 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                             children: [
                               Align(
                                 alignment: Alignment.bottomRight,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 60.0,
-                                  ),
-                                  child: Image.asset(
-                                    'assets/images/quran.png',
-                                    width: 324,
-                                  ),
+                                child: Image.asset(
+                                  'assets/images/quran.png',
+                                  width: 324,
                                 ),
                               ),
                               Container(

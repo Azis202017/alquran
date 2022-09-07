@@ -168,7 +168,8 @@ class HomeView extends StatelessWidget {
                                       numberOfVerses: data.numberOfVerses,
                                     ),
                                     contentPadding: EdgeInsets.zero,
-                                    leading: Container(
+                                    leading:
+                                     Container(
                                       width: 50,
                                       margin: const EdgeInsets.only(
                                           top: 12, bottom: 12),
@@ -193,6 +194,7 @@ class HomeView extends StatelessWidget {
                                         ],
                                       ),
                                     ),
+                                    
                                     title: Text(
                                       data?.name?.transliteration?.id ?? '',
                                     ),

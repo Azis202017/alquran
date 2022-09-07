@@ -9,6 +9,7 @@ abstract class Routes {
   static const GET_STARTED = _Paths.GET_STARTED;
   static const DETAIL_ALQURAN = _Paths.DETAIL_ALQURAN;
   static const BOTTOM_NAVBAR = _Paths.BOTTOM_NAVBAR;
+  static const DOA = _Paths.DOA;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const GET_STARTED = '/get-started';
   static const DETAIL_ALQURAN = '/detail-alquran';
   static const BOTTOM_NAVBAR = '/bottom-navbar';
+  static const DOA = '/doa';
 }
