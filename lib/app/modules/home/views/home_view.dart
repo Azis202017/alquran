@@ -37,6 +37,9 @@ class HomeView extends GetView<HomeController> {
                                 onTap: () => controller.toDetailSurah(
                                   numberOfSurah: data!.number,
                                   translationID: data.name!.translation!.id,
+                                  nameOfSurah: data.name!.transliteration!.id,
+                                  revelation: data.revelation?.id,
+                                  numberOfVerses: data.numberOfVerses,
                                 ),
                                 contentPadding: EdgeInsets.zero,
                                 leading: Container(

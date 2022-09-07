@@ -10,3 +10,15 @@ Color dotColor = const Color.fromRGBO(
   206,
   0.35,
 );
+Color detailSurahContainerColor = const Color.fromRGBO(
+  134,
+  62,
+  213,
+  0.05,
+);
+LinearGradient linear = const LinearGradient(
+  colors: [
+    Color(0xffDF98FA),
+    Color(0xff9055FF),
+  ],
+);

@@ -22,13 +22,18 @@ class HomeController extends GetxController {
     }
   }
 
-  void toDetailSurah({
-    int? numberOfSurah,
-    String? translationID,
-  }) {
+  void toDetailSurah(
+      {int? numberOfSurah,
+      String? nameOfSurah,
+      String? translationID,
+      String? revelation,
+      int? numberOfVerses}) {
     Get.toNamed(Routes.DETAIL_ALQURAN, arguments: {
       'numberOfSurah': numberOfSurah,
       'translationID': translationID,
+      'nameOfSurah': nameOfSurah,
+      'revelation': revelation,
+      'numberOfVerses': numberOfVerses,
     });
   }
 }
