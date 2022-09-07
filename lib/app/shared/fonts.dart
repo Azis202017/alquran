@@ -46,6 +46,10 @@ class Font {
     fontSize: 18,
     fontWeight: FontWeight.w500,
   );
+    static TextStyle regularTextStyle = GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
   static TextStyle semiBoldTextStyle = GoogleFonts.poppins(
     fontSize: 24,
     fontWeight: FontWeight.w600,

@@ -58,17 +58,97 @@ class HomeView extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          const SizedBox(
+                            height: 24,
+                          ),
                           Text(
                             'Assalamualaikum',
                             style: Font.mediumTextStyle.copyWith(
                               color: greyColor,
                             ),
                           ),
-                           Text(
+                          Text(
                             'Abdul Azis Al Ayubbi',
                             style: Font.semiBoldTextStyle.copyWith(
                               color: purpleColor,
                             ),
+                          ),
+                          const SizedBox(
+                            height: 24,
+                          ),
+                          Container(
+                            width: double.infinity,
+                            height: 150,
+                            decoration: BoxDecoration(
+                              gradient: linear,
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(10),
+                              ),
+                            ),
+                            child: Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 180.0),
+                                  child: Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Image.asset(
+                                      'assets/images/quran_light.png',
+                                      width: 206,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        height: 19,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Image.asset(
+                                            'assets/images/last_read.png',
+                                            width: 20,
+                                          ),
+                                          const SizedBox(
+                                            width: 8,
+                                          ),
+                                          Text(
+                                            'Terakhir Baca',
+                                            style:
+                                                Font.mediumTextStyle.copyWith(
+                                              color: whiteColor,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        'Al-Fatihah',
+                                        style: Font.semiBoldTextStyle.copyWith(
+                                          color: whiteColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Ayat No:1',
+                                        style: Font.regularTextStyle.copyWith(
+                                          color: whiteColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 24,
                           ),
                           ListView.builder(
                             shrinkWrap: true,
