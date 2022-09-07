@@ -34,6 +34,10 @@ class HomeView extends GetView<HomeController> {
                           child: Column(
                             children: [
                               ListTile(
+                                onTap: () => controller.toDetailSurah(
+                                  numberOfSurah: data!.number,
+                                  translationID: data.name!.translation!.id,
+                                ),
                                 contentPadding: EdgeInsets.zero,
                                 leading: Container(
                                   width: 50,

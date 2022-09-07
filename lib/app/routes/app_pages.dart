@@ -1,11 +1,13 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:get/get.dart';
 
+import '../modules/detail_alquran/bindings/detail_alquran_binding.dart';
+import '../modules/detail_alquran/views/detail_alquran_view.dart';
 import '../modules/get_started/bindings/get_started_binding.dart';
 import '../modules/get_started/views/get_started_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+
+// ignore_for_file: constant_identifier_names
 
 part 'app_routes.dart';
 
@@ -24,6 +26,11 @@ class AppPages {
       name: _Paths.GET_STARTED,
       page: () => const GetStartedView(),
       binding: GetStartedBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_ALQURAN,
+      page: () => const DetailAlquranView(),
+      binding: DetailAlquranBinding(),
     ),
   ];
 }

@@ -2,6 +2,8 @@ import 'package:alquran/app/data/surah_model.dart';
 import 'package:alquran/app/services/surah_api_service.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 class HomeController extends GetxController {
   List<SurahModel?> surahModel = [];
   bool isLoading = true;
@@ -18,6 +20,15 @@ class HomeController extends GetxController {
       isLoading = false;
       update();
     }
-   
+  }
+
+  void toDetailSurah({
+    int? numberOfSurah,
+    String? translationID,
+  }) {
+    Get.toNamed(Routes.DETAIL_ALQURAN, arguments: {
+      'numberOfSurah': numberOfSurah,
+      'translationID': translationID,
+    });
   }
 }
