@@ -7,10 +7,13 @@ environment:
 
 dependencies:
   accordion: ^2.5.1
+  arabic_numbers: ^1.0.0
   cupertino_icons: ^1.0.2
   dio: ^4.0.6
   flutter:
     sdk: flutter
+  flutter_qiblah: ^2.0.2
+  flutter_share: ^2.0.0
   get: 4.6.5
   google_fonts: ^3.0.1
   lottie: ^1.4.2

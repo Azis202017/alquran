@@ -57,7 +57,9 @@ class DoaView extends StatelessWidget {
                           ),
                           color: Colors.white,
                         ),
-                        height: 600,
+                        margin: const EdgeInsets.only(
+                          top: 120,
+                        ),
                         child: ListView.builder(
                           padding: EdgeInsets.zero,
                           itemCount: controller.listOfDoa.length,

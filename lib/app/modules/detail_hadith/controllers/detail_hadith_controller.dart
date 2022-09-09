@@ -9,7 +9,7 @@ class DetailHadithController extends GetxController {
   String? _nameOfHadith;
   String? get id => _id;
   String? get nameOfHadith => _nameOfHadith;
-  bool isLoading= true;
+  bool isLoading = true;
   List<HaditsDetail> detailHadith = [];
   void getData() async {
     _id = dataHadith['id'];
@@ -19,8 +19,6 @@ class DetailHadithController extends GetxController {
       detailHadith = hadith;
       isLoading = false;
       update();
-    } else {
-      print(hadith);
     }
   }
 }

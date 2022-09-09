@@ -1,6 +1,9 @@
+import 'package:arabic_numbers/arabic_numbers.dart';
+import 'package:flutter_share/flutter_share.dart';
+
+import 'package:get/get.dart';
 import 'package:alquran/app/data/detail_surah_model.dart';
 import 'package:alquran/app/services/detail_surah_api.service.dart';
-import 'package:get/get.dart';
 
 class DetailAlquranController extends GetxController {
   List<DetailSurah?> detailSurah = [];
@@ -27,5 +30,18 @@ class DetailAlquranController extends GetxController {
       isLoading = false;
       update();
     }
+  }
+
+  Future<void> share(
+      {String? arab, String? translate, int? inSurah, int? ayat}) async {
+    var arabicNumber = ArabicNumbers();
+
+    await FlutterShare.share(
+      title: nameOfSurah ?? "",
+      text: '''$nameOfSurah ayat ke: $inSurah 
+  
+      (${arabicNumber.convert(inSurah)})  $arab
+      $inSurah. $translate''',
+    );
   }
 }

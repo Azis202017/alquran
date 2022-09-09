@@ -44,7 +44,6 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
               ),
             ),
           ),
-        
           body: controller.isLoading
               ? Center(
                   child: Lottie.asset('assets/json/loading.json'),
@@ -134,7 +133,6 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                                         )
                                       ],
                                     ),
-                                   
                                     const SizedBox(
                                       height: 32,
                                     ),
@@ -187,10 +185,20 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                                       ),
                                       Row(
                                         children: [
-                                          Icon(
-                                            color: primaryColor,
-                                            size: 24,
-                                            Icons.share_outlined,
+                                          GestureDetector(
+                                            onTap: () {
+                                              controller.share(
+                                                arab: data?.text?.arab,
+                                                translate: data?.translation?.id,
+                                                ayat: controller.numberOfVerses,
+                                                inSurah: data?.number?.inSurah,
+                                              );
+                                            },
+                                            child: Icon(
+                                              color: primaryColor,
+                                              size: 24,
+                                              Icons.share_outlined,
+                                            ),
                                           ),
                                           Icon(
                                             color: primaryColor,
@@ -207,7 +215,6 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                                     ],
                                   ),
                                 ),
-                              
                                 const SizedBox(height: 24),
                                 SizedBox(
                                   width: double.infinity,

@@ -55,7 +55,9 @@ class HadithView extends StatelessWidget {
                     ),
                     color: Colors.white,
                   ),
-                  height: 600,
+                  margin: const EdgeInsets.only(
+                    top: 120,
+                  ),
                   child: ListView.builder(
                     padding: const EdgeInsets.only(
                       top: 26,
@@ -68,9 +70,7 @@ class HadithView extends StatelessWidget {
                         children: [
                           ListTile(
                             onTap: () => controller.toDetailHadith(
-                              id: data.id,
-                              nameOfHadith : data.name
-                            ),
+                                id: data.id, nameOfHadith: data.name),
                             leading: Container(
                               width: 50,
                               margin:
