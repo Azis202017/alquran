@@ -104,13 +104,15 @@ class DoaView extends StatelessWidget {
                                     textAlign: TextAlign.end,
                                   ),
                                   subtitle: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         data.latin!,
                                         style: Font.regularTextStyle.copyWith(
                                           fontSize: 14,
                                           height: 2,
+                                          fontWeight: FontWeight.w700,
                                         ),
                                       ),
                                       Text(

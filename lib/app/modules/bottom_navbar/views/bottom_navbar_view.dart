@@ -1,4 +1,5 @@
 import 'package:alquran/app/modules/doa/views/doa_view.dart';
+import 'package:alquran/app/modules/hadith/views/hadith_view.dart';
 import 'package:alquran/app/modules/home/views/home_view.dart';
 import 'package:alquran/app/shared/color.dart';
 import 'package:flutter/material.dart';
@@ -19,12 +20,7 @@ class BottomNavbarView extends StatelessWidget {
             index: controller.tabIndex,
             children: const [
               HomeView(),
-              Center(
-                child: Text(
-                  'Satu Hadist',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
+              HadithView(),
               Center(
                 child: Text(
                   'Jadwal Sholat',

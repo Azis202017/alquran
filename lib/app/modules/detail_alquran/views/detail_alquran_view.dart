@@ -134,6 +134,7 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                                         )
                                       ],
                                     ),
+                                   
                                     const SizedBox(
                                       height: 32,
                                     ),
@@ -206,6 +207,7 @@ class DetailAlquranView extends GetView<DetailAlquranController> {
                                     ],
                                   ),
                                 ),
+                              
                                 const SizedBox(height: 24),
                                 SizedBox(
                                   width: double.infinity,

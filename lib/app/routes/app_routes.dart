@@ -10,6 +10,8 @@ abstract class Routes {
   static const DETAIL_ALQURAN = _Paths.DETAIL_ALQURAN;
   static const BOTTOM_NAVBAR = _Paths.BOTTOM_NAVBAR;
   static const DOA = _Paths.DOA;
+  static const HADITH = _Paths.HADITH;
+  static const DETAIL_HADITH = _Paths.DETAIL_HADITH;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const DETAIL_ALQURAN = '/detail-alquran';
   static const BOTTOM_NAVBAR = '/bottom-navbar';
   static const DOA = '/doa';
+  static const HADITH = '/hadith';
+  static const DETAIL_HADITH = '/detail-hadith';
 }
