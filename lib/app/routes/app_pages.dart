@@ -14,6 +14,10 @@ import '../modules/hadith/bindings/hadith_binding.dart';
 import '../modules/hadith/views/hadith_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/prayer_time/bindings/prayer_time_binding.dart';
+import '../modules/prayer_time/views/prayer_time_view.dart';
+import '../modules/qiblah/bindings/qiblah_binding.dart';
+import '../modules/qiblah/views/qiblah_view.dart';
 
 // ignore_for_file: constant_identifier_names
 
@@ -59,6 +63,16 @@ class AppPages {
       name: _Paths.DETAIL_HADITH,
       page: () => const DetailHadithView(),
       binding: DetailHadithBinding(),
+    ),
+    GetPage(
+      name: _Paths.QIBLAH,
+      page: () => QiblahView(),
+      binding: QiblahBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRAYER_TIME,
+      page: () => const PrayerTimeView(),
+      binding: PrayerTimeBinding(),
     ),
   ];
 }

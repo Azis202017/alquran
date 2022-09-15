@@ -20,7 +20,8 @@ class DoaView extends StatelessWidget {
               ? Center(
                   child: Lottie.asset('assets/json/loading.json'),
                 )
-              : Stack(
+              : 
+              Stack(
                   children: [
                     Container(
                       margin: const EdgeInsets.symmetric(
@@ -127,6 +128,7 @@ class DoaView extends StatelessWidget {
                                     ],
                                   ),
                                 ),
+                              
                               ],
                             );
                           }),
@@ -135,6 +137,7 @@ class DoaView extends StatelessWidget {
                     ),
                   ],
                 ),
+      
         );
       },
     );

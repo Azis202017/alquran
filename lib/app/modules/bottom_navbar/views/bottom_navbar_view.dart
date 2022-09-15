@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../prayer_time/views/prayer_time_view.dart';
 import '../controllers/bottom_navbar_controller.dart';
 
 class BottomNavbarView extends StatelessWidget {
@@ -21,12 +22,7 @@ class BottomNavbarView extends StatelessWidget {
             children: const [
               HomeView(),
               HadithView(),
-              Center(
-                child: Text(
-                  'Jadwal Sholat',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
+              PrayerTimeView(),
               DoaView(),
             ],
           ),

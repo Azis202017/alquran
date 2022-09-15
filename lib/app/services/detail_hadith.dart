@@ -6,6 +6,8 @@ class DetailHadithApiService {
   Future<List<HaditsDetail>> getDetailHadith(
       {String? id ="muslim", String? range = "1-300"}) async {
     try {
+
+      
       Response response = await Dio()
           .get('https://api.hadith.gading.dev/books/$id?range=$range');
         
