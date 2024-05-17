@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../../../routes/app_pages.dart';
 
 class HomeController extends GetxController {
-  List<SurahModel?> surahModel = [];
+  List<SurahModel> surahModel = [];
   bool isLoading = true;
   @override
   void onInit() async {
@@ -14,12 +14,9 @@ class HomeController extends GetxController {
   }
 
   void getSurah() async {
-    List<SurahModel?> data = await SurahApi().getSurah();
-    if (data != []) {
-      surahModel = data;
-      isLoading = false;
-      update();
-    }
+    surahModel = await SurahApi().getSurah();
+    isLoading = false;
+    update();
   }
 
   void toDetailSurah(

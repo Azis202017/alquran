@@ -12,18 +12,20 @@ class QiblahView extends GetView<QiblahController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(builder: (_, AsyncSnapshot<bool?> snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-        if (snapshot.hasError) {
-          return Text("Error: ${snapshot.error.toString()}");
-        }
+      body: FutureBuilder(
+          future: deviceSupport,
+          builder: (_, AsyncSnapshot<bool?> snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (snapshot.hasError) {
+              return Text("Error: ${snapshot.error.toString()}");
+            }
 
-        return const QiblahCompass();
-      }),
+            return const QiblahCompass();
+          }),
     );
   }
 }

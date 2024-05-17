@@ -3,7 +3,7 @@ version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
 environment:
-  sdk: '>=2.18.0 <3.0.0'
+  sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
   accordion: ^2.5.1
@@ -12,12 +12,12 @@ dependencies:
   dio: ^4.0.6
   flutter:
     sdk: flutter
-  flutter_qiblah: ^2.0.2
+  flutter_qiblah: ^3.0.3
   flutter_share: ^2.0.0
   flutter_svg: ^1.1.5
-  geolocator: ^7.6.0
+  geolocator: ^11.1.0
   get: 4.6.5
-  google_fonts: ^3.0.1
+  google_fonts: ^6.2.1
   lottie: ^1.4.2
 
 dev_dependencies:

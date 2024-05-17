@@ -14,7 +14,7 @@ class PrayerTimeController extends GetxController {
   }
 
   void prayerTime() async {
-    var data = await PrayerTimeApi().getPrayer(DateTime.now());
+    var data = await PrayerTimeApi().getPrayer();
     prayer = data;
 
     isLoading = false;

@@ -4,61 +4,46 @@
 
 import 'dart:convert';
 
-PrayerTime prayerTimeFromJson(String str) =>
-    PrayerTime.fromJson(json.decode(str));
+PrayerTime prayerTimeFromJson(String str) => PrayerTime.fromJson(json.decode(str));
 
 String prayerTimeToJson(PrayerTime data) => json.encode(data.toJson());
 
 class PrayerTime {
-  PrayerTime({
-    this.tanggal,
-    this.imsak,
-    this.subuh,
-    this.terbit,
-    this.dhuha,
-    this.dzuhur,
-    this.ashar,
-    this.maghrib,
-    this.isya,
-    this.date,
-  });
+    String? dateFor;
+    String? fajr;
+    String? shurooq;
+    String? dhuhr;
+    String? asr;
+    String? maghrib;
+    String? isha;
 
-  String? tanggal;
-  String? imsak;
-  String? subuh;
-  String? terbit;
-  String? dhuha;
-  String? dzuhur;
-  String? ashar;
-  String? maghrib;
-  String? isya;
-  DateTime? date;
+    PrayerTime({
+        this.dateFor,
+        this.fajr,
+        this.shurooq,
+        this.dhuhr,
+        this.asr,
+        this.maghrib,
+        this.isha,
+    });
 
-  factory PrayerTime.fromJson(Map<String, dynamic> json) => PrayerTime(
-        tanggal: json["tanggal"],
-        imsak: json["imsak"],
-        subuh: json["subuh"],
-        terbit: json["terbit"],
-        dhuha: json["dhuha"],
-        dzuhur: json["dzuhur"],
-        ashar: json["ashar"],
+    factory PrayerTime.fromJson(Map<String, dynamic> json) => PrayerTime(
+        dateFor: json["date_for"],
+        fajr: json["fajr"],
+        shurooq: json["shurooq"],
+        dhuhr: json["dhuhr"],
+        asr: json["asr"],
         maghrib: json["maghrib"],
-        isya: json["isya"],
-        date: json["date"] == null ? null : DateTime.parse(json["date"]),
-      );
+        isha: json["isha"],
+    );
 
-  Map<String, dynamic> toJson() => {
-        "tanggal": tanggal,
-        "imsak": imsak,
-        "subuh": subuh,
-        "terbit": terbit,
-        "dhuha": dhuha,
-        "dzuhur": dzuhur,
-        "ashar": ashar,
+    Map<String, dynamic> toJson() => {
+        "date_for": dateFor,
+        "fajr": fajr,
+        "shurooq": shurooq,
+        "dhuhr": dhuhr,
+        "asr": asr,
         "maghrib": maghrib,
-        "isya": isya,
-        "date": date == null
-            ? null
-            : "${date!.year.toString().padLeft(4, '0')}-${date!.month.toString().padLeft(2, '0')}-${date!.day.toString().padLeft(2, '0')}",
-      };
+        "isha": isha,
+    };
 }

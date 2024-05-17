@@ -91,46 +91,50 @@ class PrayerTimeView extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        const SizedBox(height : 24,),
-
-                        PrayerTimeWidget(
-                          nameOfPrayer: "Imsak",
-                          prayer: controller.prayer?.imsak ?? "",
+                        const SizedBox(
+                          height: 24,
                         ),
-                        const SizedBox(height : 16,),
+                        const SizedBox(
+                          height: 16,
+                        ),
                         PrayerTimeWidget(
                           nameOfPrayer: "Subuh",
-                          prayer: controller.prayer?.subuh ?? "",
+                          prayer: controller.prayer?.fajr ?? "",
                         ),
-                        const SizedBox(height : 16,),
-
+                        const SizedBox(
+                          height: 16,
+                        ),
                         PrayerTimeWidget(
                           nameOfPrayer: "Terbit",
-                          prayer: controller.prayer?.terbit ?? "",
+                          prayer: controller.prayer?.shurooq ?? "",
                         ),
-                        const SizedBox(height : 16,),
-
+                        const SizedBox(
+                          height: 16,
+                        ),
                         PrayerTimeWidget(
                           nameOfPrayer: "Dzuhur",
-                          prayer: controller.prayer?.dzuhur ?? "",
+                          prayer: controller.prayer?.dhuhr ?? "",
                         ),
-                        const SizedBox(height : 16,),
-
+                        const SizedBox(
+                          height: 16,
+                        ),
                         PrayerTimeWidget(
                           nameOfPrayer: "Ashar",
-                          prayer: controller.prayer?.ashar ?? "",
+                          prayer: controller.prayer?.asr ?? "",
                         ),
-                        const SizedBox(height : 16,),
-
+                        const SizedBox(
+                          height: 16,
+                        ),
                         PrayerTimeWidget(
                           nameOfPrayer: "Maghrib",
                           prayer: controller.prayer?.maghrib ?? "",
                         ),
-                        const SizedBox(height : 16,),
-
+                        const SizedBox(
+                          height: 16,
+                        ),
                         PrayerTimeWidget(
                           nameOfPrayer: "Isya",
-                          prayer: controller.prayer?.isya ?? "",
+                          prayer: controller.prayer?.isha ?? "",
                         ),
                       ],
                     ),

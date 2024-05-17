@@ -153,6 +153,7 @@ class HomeView extends StatelessWidget {
                           ListView.builder(
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),
+                            primary:false,
                             itemCount: controller.surahModel.length,
                             itemBuilder: (context, index) {
                               var data = controller.surahModel[index];
@@ -160,7 +161,7 @@ class HomeView extends StatelessWidget {
                                 children: [
                                   ListTile(
                                     onTap: () => controller.toDetailSurah(
-                                      numberOfSurah: data!.number,
+                                      numberOfSurah: data.number,
                                       translationID: data.name!.translation!.id,
                                       nameOfSurah:
                                           data.name!.transliteration!.id,
@@ -186,7 +187,7 @@ class HomeView extends StatelessWidget {
                                             ),
                                             width: 36,
                                             child: Text(
-                                              '${data?.number}  ',
+                                              '${data.number}  ',
                                               style: Font.leadingTextStyle,
                                               textAlign: TextAlign.center,
                                             ),
@@ -196,12 +197,12 @@ class HomeView extends StatelessWidget {
                                     ),
                                     
                                     title: Text(
-                                      data?.name?.transliteration?.id ?? '',
+                                      data.name?.transliteration?.id ?? '',
                                     ),
                                     subtitle: Row(
                                       children: [
                                         Text(
-                                          '${data?.revelation?.id} ',
+                                          '${data.revelation?.id} ',
                                         ),
                                         SizedBox(
                                           width: 4,
@@ -210,11 +211,11 @@ class HomeView extends StatelessWidget {
                                             backgroundColor: dotColor,
                                           ),
                                         ),
-                                        Text(' ${data?.numberOfVerses} Ayat')
+                                        Text(' ${data.numberOfVerses} Ayat')
                                       ],
                                     ),
                                     trailing: Text(
-                                      '${data?.name?.short}',
+                                      '${data.name?.short}',
                                       style: Font.trailingArabicTextStyle
                                           .copyWith(color: primaryColor),
                                     ),
